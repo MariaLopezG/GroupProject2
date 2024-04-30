@@ -1,10 +1,18 @@
 /* Navbar */
 .navbar {
     background-color: rgb(2, 77, 2);
-    padding: 10px 20px;
+    height: 60px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 0;
+    padding: 0;
+}
+
+#title {
+    color: white;
+    font-size: 24px;
+    margin-left: 20px;
 }
 
 .navbar-links {
@@ -14,6 +22,10 @@
     display: flex;
 }
 
+.navbar-links li:first-child {
+    margin-left: auto;
+}
+
 .navbar-links li {
     margin-right: 20px;
 }
@@ -21,12 +33,14 @@
 .navbar-links li a {
     color: white;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 24px;
 }
 
 .navbar-links li a:hover {
     color: rgb(152, 191, 152);
 }
+
+
 
 /* Main Section */
 
