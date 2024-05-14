@@ -19,3 +19,5 @@ categoryButtons.forEach(button => {
         button.classList.add('active');
     });
 });
+
+
