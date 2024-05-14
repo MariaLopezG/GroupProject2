@@ -1,0 +1,92 @@
+/* shopstyle.css */
+
+/* Main Section */
+.main-section {
+    padding: 50px;
+    text-align: center;
+}
+
+.main-section h2 {
+    color: darkgreen;
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+/* Category buttons */
+.category-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.category-button {
+    background-color: transparent;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    font-size: 16px;
+    cursor: pointer;
+    color: darkgreen;
+    transition: color 0.3s ease;
+}
+
+.category-button.active {
+    color: #257d25; /* Active category color */
+}
+
+.category-button:hover {
+    color: #257d25; /* Hover color */
+}
+
+
+/* Product Grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.product {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+}
+
+.product img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.product h3 {
+    color: #333;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.product p {
+    color: darkgreen;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.product button {
+    background-color: darkgreen;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.product button:hover {
+    background-color: #257d25; /* Darker shade of green */
+}

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop - ReThread Market</title>
+    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="../styles/cart-style.css">
+    <script src="https://kit.fontawesome.com/5564cf5136.js" crossorigin="anonymous"></script>
+    <script src="../scripts/cart-style.js"></script>
+</head>
+<body>
+    <div class="navbar">
+        <ul class="navbar-links">
+            <li><a href="../index.html" id="title">ReThread Market</a></li>
+            <li class="right-side"><a href="pages/search.html"><i class="fa-solid fa-magnifying-glass"></i> Search</a></li>
+            <li class="right-side active"><a href="./cart.html"><i class="fa-solid fa-cart-shopping"></i> Shop</a></li>
+            <li class="right-side dropdown">
+                <a href="#" class="dropdown-btn"><i class="fa-regular fa-user"> Profile</i></a>
+                <div class="dropdown-content">
+                    <a href="./user.html">My Profile</a>
+                    <a href="pages/login.html">Log In</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <div class="main-section">
+        <h2>Shop</h2>
+
+        <div class="category-buttons">
+            <button class="category-button active" data-category="all">All</button>
+            <button class="category-button" data-category="bags">Bags</button>
+            <button class="category-button" data-category="shoes">Shoes</button>
+            <button class="category-button" data-category="dresses">Dresses</button>
+            <button class="category-button" data-category="jewelry">Jewelry</button>
+        </div>
+
+        <div class="product-grid">
+            <!-- Product 1 -->
+            <div class="product" data-category="bags">
+                <img src="../images/coach_bag.jpg" alt="Product 1">
+                <h3>Product Name</h3>
+                <p>$20.00</p>
+                <button>Add to Cart</button>
+            </div>
+            <!-- Product 2 -->
+            <div class="product">
+                <img src="../images/product2.jpg" alt="Product 2">
+                <h3>Product Name</h3>
+                <p>$25.00</p>
+                <button>Add to Cart</button>
+            </div>
+            <!-- Add more products as needed -->
+        </div>
+    </div>
+
+</body>
+</html>
