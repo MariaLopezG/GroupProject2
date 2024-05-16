@@ -3,26 +3,35 @@ const signupForm = document.getElementById('signupForm');
 
 loginForm.addEventListener('submit', async (e) => {
     e.preventDefault();
-    
-    const formData = new FormData(loginForm);
-    const response = await fetch('/login', {
-        method: 'POST',
-        body: formData
-    });
-    
-    const data = await response.json();
-    console.log(data); // Handle response here (e.g., display message to user)
+
+    try {
+        const formData = new FormData(loginForm);
+        const response = await fetch('/login', {
+            method: 'POST',
+            body: formData
+        });
+
+        const data = await response.json();
+        console.log(data); 
+    } catch (error) {
+        console.error('There was a problem with the fetch operation:', error);
+    }
 });
 
 signupForm.addEventListener('submit', async (e) => {
     e.preventDefault();
-    
-    const formData = new FormData(signupForm);
-    const response = await fetch('/signup', {
-        method: 'POST',
-        body: formData
-    });
-    
-    const data = await response.json();
-    console.log(data); // Handle response here (e.g., display message to user)
+
+    try {
+        const formData = new FormData(signupForm);
+        const response = await fetch('/signup', {
+            method: 'POST',
+            body: formData
+        });
+
+        const data = await response.json();
+        console.log(data); 
+    } catch (error) {
+        console.error('There was a problem with the fetch operation:', error);
+    }
 });
+
