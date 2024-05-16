@@ -3,17 +3,20 @@ const express = require('express');
 const path = require('path');
 const db = require('./database');
 
-// Initialize Express app
 const app = express();
 
-// Middleware for parsing JSON bodies
 app.use(express.json());
 
-// Middleware for parsing URL-encoded bodies
 app.use(express.urlencoded({ extended: true }));
 
-// Serve static files
+
 app.use(express.static(path.join(__dirname, 'public')));
+
+//Route for the root URL
+app.get('/', (req, res) => {
+    // Send the index.html file as the response
+    res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
 
 // Route for user login
 app.post('/login', (req, res) => {
@@ -49,8 +52,9 @@ app.post('/signup', (req, res) => {
     });
 });
 
-// Start the server
+
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
+
