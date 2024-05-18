@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up - ReThread Market</title>
-    <link rel="stylesheet" href="../public/styles/style.css">
-    <link rel="stylesheet" href="../public/styles/login-style.css">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="stylesheet" href="styles/login-style.css">
     <script src="https://kit.fontawesome.com/5564cf5136.js" crossorigin="anonymous"></script>
 </head>
 <body>
@@ -28,15 +28,15 @@
     <div class="login-container">
         
         <div class="login-image">
-            <img src="../public/images/clothes.jpeg" alt="Clothes Image">
+            <img src="images/clothes.jpeg" alt="Clothes Image">
         </div>
 
         <div class="login-form">
             <h2>Sign Up for ReThread Market</h2>
-            <form id="signupForm" method="POST">
+            <form id="signupForm" action="/signup" method="POST">
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" placeholder="Enter your name" required>
-                <label for="last-name">Last Name</label>
+                <label for="last_name">Last Name</label>
                 <input type="text" id="last_name" name="last_name" placeholder="Enter your last name" required>
                 <label for="username">Username</label>
                 <input type="text" id="username" name="username" placeholder="Enter username" required>
@@ -46,8 +46,9 @@
                 <input type="password" id="password" name="password" placeholder="Enter password" required>
                 <button type="submit" class="login-button">Sign Up</button>
             </form>
-            <p>Already have an account? <a href="../views/login.html">Log In</a></p>
+            <p>Already have an account? <a href="login.html">Log In</a></p>
         </div>
     </div>
+    <script src="../scripts/script.js"></script>
 </body>
 </html>
