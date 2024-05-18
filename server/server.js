@@ -59,7 +59,7 @@ app.post('/signup', (req, res) => {
         }
 
         // Successful registration
-        res.status(201).json({ message: 'Registration successful' });
+        res.status(201).redirect('/login');
     });
 });
 
