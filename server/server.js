@@ -43,8 +43,12 @@ app.post('/login', (req, res) => {
             return res.status(401).json({ error: 'Invalid username or password' });
         }
 
+        // Pass the username to the HTML template
+        const username = row.username;
+        res.status(200).redirect('/?username=' + encodeURIComponent(username));
+
         // Successful login
-        res.status(200).json({ message: 'Login successful' });
+        // res.status(200).redirect('/');
     });
 });
 

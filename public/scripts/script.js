@@ -1,37 +1,16 @@
-// const loginForm = document.getElementById('loginForm');
-// const signupForm = document.getElementById('signupForm');
+// const isLoggedIn = true; // For demonstration purposes, assuming the user is logged in
 
-// loginForm.addEventListener('submit', async (e) => {
-//     e.preventDefault();
-
-//     try {
-//         const formData = new FormData(loginForm);
-//         const response = await fetch('/login', {
-//             method: 'POST',
-//             body: formData
-//         });
-
-//         const data = await response.json();
-//         console.log(data); 
-//     } catch (error) {
-//         console.error('There was a problem with the fetch operation:', error);
+//     if (isLoggedIn) {
+//         // Update the navbar link to display the username
+//         const profileLink = document.getElementById('profileLink');
+//         profileLink.innerHTML = `<i class="fa-regular fa-user"> ${username}</i>`;
 //     }
-// });
+// Extract the username from the URL
+const urlParams = new URLSearchParams(window.location.search);
+const username = urlParams.get('username');
 
-// signupForm.addEventListener('submit', async (e) => {
-//     e.preventDefault();
-
-//     try {
-//         const formData = new FormData(signupForm);
-//         const response = await fetch('/signup', {
-//             method: 'POST',
-//             body: formData
-//         });
-
-//         const data = await response.json();
-//         console.log(data); 
-//     } catch (error) {
-//         console.error('There was a problem with the fetch operation:', error);
-//     }
-// });
-
+if (username) {
+    // Update the navbar link to display the username
+    const profileLink = document.getElementById('profileLink');
+    profileLink.innerHTML = `<i class="fa-regular fa-user"> ${username}</i>`;
+}
