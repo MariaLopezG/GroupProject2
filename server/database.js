@@ -1,4 +1,5 @@
 const fs = require("fs");
+const path = require('path');
 const sqlite3 = require("sqlite3").verbose();
 const filepath = path.join(__dirname, '..', 'my_database.db');
 
