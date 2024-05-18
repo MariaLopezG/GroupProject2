@@ -1,4 +1,3 @@
-// Require necessary modules
 const express = require('express');
 const path = require('path');
 const db = require('./database');
@@ -8,20 +7,32 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-
-app.use(express.static(path.join(__dirname, '/styles')));
+app.use(express.static(path.join(__dirname, '..', 'public')));
 
 //Route for the root URL
 app.get('/', (req, res) => {
     // Send the index.html file as the response
-    res.sendFile(path.join(__dirname, '..', 'index.html'));
+    res.sendFile(path.join(__dirname, '..', 'views', 'index.html'));
+});
+
+//Route for other HTML pages
+app.get('/login', (req, res) => {
+    res.sendFile(path.join(__dirname, '..', 'views', 'login.html'));
+});
+
+app.get('/login', (req, res) => {
+    res.sendFile(path.join(__dirname, '..', 'views', 'signup.html'));
+});
+
+app.get('/login', (req, res) => {
+    res.sendFile(path.join(__dirname, '..', 'views', 'cart.html'));
 });
 
 // Route for user login
 app.post('/login', (req, res) => {
     const { username, password } = req.body;
 
-    // Query the database to check if the username and password are valid
+    // check if the username and password are valid
     db.get('SELECT * FROM users WHERE username = ? AND password = ?', [username, password], (err, row) => {
         if (err) {
             return res.status(500).json({ error: 'Internal Server Error' });
