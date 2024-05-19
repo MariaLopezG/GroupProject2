@@ -1,5 +1,6 @@
 const express = require('express');
 const path = require('path');
+const session = require('express-session');
 const db = require('./database');
 
 const app = express();
@@ -64,6 +65,16 @@ app.post('/signup', (req, res) => {
 
         // Successful registration
         res.status(201).redirect('/login');
+    });
+});
+
+//Rout for logout
+app.get('/logout', (req, res) => {
+    req.session.destroy((err) => {
+        if (err) {
+            return res.status(500).json({ error: 'Failed to logout' });
+        }
+        res.redirect('/login.html');
     });
 });
 
