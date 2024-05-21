@@ -28,15 +28,26 @@ addToCartButtons.forEach(button => {
         const product = button.closest('.product');
         const productName = product.querySelector('h3').textContent;
         const productPrice = product.querySelector('p').textContent;
+        const productImage = product.querySelector('img').src;
 
-        // Add product to shopping cart (you can implement this functionality)
-        addToCart(productName, productPrice);
+        // Create an object representing the selected item
+        const newItem = {
+            name: productName,
+            price: productPrice,
+            image: productImage
+        };
+
+        // Add the item to the selected items array (or you can implement this functionality)
+        addToCart(newItem);
+
+        // Redirect to the shopping cart page
+        window.location.href = 'shopping-cart.html';
     });
 });
 
-function addToCart(name, price) {
-    // Implement adding product to the shopping cart
-    console.log(`Added ${name} to the shopping cart.`);
+function addToCart(item) {
+    // Implement adding product to the shopping cart or selected items array
+    console.log(`Added ${item.name} to the shopping cart.`);
 }
 
 
