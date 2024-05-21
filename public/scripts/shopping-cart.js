@@ -1,5 +1,3 @@
-// scripts/cart.js
-
 // Retrieve selected items from storage (you need to implement this functionality)
 const selectedItems = []; // Get selected items from storage
 
@@ -17,4 +15,18 @@ selectedItems.forEach(item => {
         </div>
     `;
     cartItemsSection.appendChild(cartItem);
+});
+
+// Calculate and display total price
+const totalPriceElement = document.querySelector('.total-price');
+
+const total = selectedItems.reduce((acc, item) => acc + parseFloat(item.price), 0);
+totalPriceElement.textContent = `$${total.toFixed(2)}`;
+
+// Handle checkout
+const checkoutButton = document.querySelector('.checkout-button');
+
+checkoutButton.addEventListener('click', () => {
+    // Implement checkout logic here, such as clearing the cart or redirecting to payment page
+    alert('Checkout functionality to be implemented.');
 });
