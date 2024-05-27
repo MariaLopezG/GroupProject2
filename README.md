@@ -16,6 +16,14 @@ ReThread Market is a web-based marketplace that allows users to buy and sell uni
 - Adding Items to Shopping Cart
 - Viewing Cart and Checkout
 
+## Setup
+To run the project locally, follow these steps:
+
+1. Clone the repository to your local machine.
+2. Navigate to the project directory.
+3. Install dependencies using npm install.
+4. Start the server using npm start.
+
 ## Usage
 - User Registration and Login: Users can sign up for an account or log in if they already have one. Passwords are securely hashed and stored in the database.
 - Adding Items to Shopping Cart: Users can browse through products and add items to their shopping cart by clicking the "Add to Cart" button.
@@ -27,6 +35,8 @@ ReThread Market is a web-based marketplace that allows users to buy and sell uni
 
 ## Acknowledgments
 We extend our gratitude to the developers of the various libraries and frameworks used in this project, as well as the supportive community on forums and documentation sites such as 
-https://stackoverflow.com/
-https://developer.mozilla.org/en-US/
+
+- https://stackoverflow.com/
+- https://developer.mozilla.org/en-US/
+- https://www.w3schools.com/
 
